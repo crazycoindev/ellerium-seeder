@@ -9,7 +9,7 @@
 #include <getopt.h>
 #include <atomic>
 
-#include "ellerium.h"
+#include "bitcoin.h"
 #include "db.h"
 
 using namespace std;
