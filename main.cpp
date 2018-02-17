@@ -397,13 +397,13 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"ellerium-dns1.steeppool.com", "5.9.39.71", ""};
+static const string mainnet_seeds[] = {"ellerium-dns1.steeppool.com", ""};
 static const string testnet_seeds[] = {"", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 6110), true);
+    db.Add(CService("5.9.39.71", 6110), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
