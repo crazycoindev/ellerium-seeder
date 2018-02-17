@@ -109,7 +109,7 @@ public:
 
     if (total <= 3 && success * 2 >= total) return true;
 
-    if (stat2H.reliability > 0.85 && stat2H.count > 2) return true;
+    if (stat2H.reliability > 0.85 && stat2H.count > 1) return true;
     if (stat8H.reliability > 0.70 && stat8H.count > 4) return true;
     if (stat1D.reliability > 0.55 && stat1D.count > 8) return true;
     if (stat1W.reliability > 0.45 && stat1W.count > 16) return true;
