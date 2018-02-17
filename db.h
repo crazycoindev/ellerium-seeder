@@ -16,7 +16,7 @@
 
 static inline int GetRequireHeight(const bool testnet = fTestNet)
 {
-    return testnet ? 1000 : 1000;
+    return testnet ? 0 : 1000;
 }
 
 std::string static inline ToString(const CService &ip) {
@@ -109,7 +109,7 @@ public:
 
     if (total <= 3 && success * 2 >= total) return true;
 
-    if (stat2H.reliability > 0.85 && stat2H.count > 1) return true;
+    if (stat2H.reliability > 0.85 && stat2H.count > 2) return true;
     if (stat8H.reliability > 0.70 && stat8H.count > 4) return true;
     if (stat1D.reliability > 0.55 && stat1D.count > 8) return true;
     if (stat1W.reliability > 0.45 && stat1W.count > 16) return true;
@@ -119,7 +119,7 @@ public:
   }
   int GetBanTime() const {
     if (IsGood()) return 0;
-    if (clientVersion && clientVersion < 70720 ) { return 604800; }
+    if (clientVersion && clientVersion < 5012 ) { return 604800; }
     if (stat1M.reliability - stat1M.weight + 1.0 < 0.15 && stat1M.count > 32) { return 30*86400; }
     if (stat1W.reliability - stat1W.weight + 1.0 < 0.10 && stat1W.count > 16) { return 7*86400; }
     if (stat1D.reliability - stat1D.weight + 1.0 < 0.05 && stat1D.count > 8) { return 1*86400; }
