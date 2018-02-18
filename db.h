@@ -104,7 +104,7 @@ public:
     if (ip.GetPort() != GetDefaultPort()) return false;
     if (!(services & NODE_NETWORK)) return false;
     if (!ip.IsRoutable()) return false;
-    if (clientVersion && clientVersion < 5010) return false;
+    if (clientVersion && clientVersion < 100) return false;
     if (blocks && blocks < GetRequireHeight()) return false;
 
     if (total <= 3 && success * 2 >= total) return true;
