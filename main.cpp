@@ -356,8 +356,8 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"ellerium-node04.ssus.tech", "ellerium-node05.ssus.tech", "ellerium-node06.ssus.tech", ""};
-static const string testnet_seeds[] = {"ellerium-test-node08.ssus.tech", "ellerium-test-node09.ssus.tech", ""};
+static const string mainnet_seeds[] = {"ellerium-dns1.steeppool.com", ""};
+static const string testnet_seeds[] = {"", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
