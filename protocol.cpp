@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2011 The ellerium developers
+// Copyright (c) 2011 The Bitcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,8 +22,8 @@ static const char* ppszTypeName[] =
     "block",
 };
 
+//unsigned char pchMessageStart[4] = { 0x08, 0x02, 0x01, 0x17 };
 unsigned char pchMessageStart[4] = { 0x00, 0x22, 0x00, 0xaa };
-//unsigned char pchMessageStart[4] = { 0xaa, 0x00, 0x22, 0x00 };
 
 CMessageHeader::CMessageHeader()
 {
